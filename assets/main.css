@@ -1,0 +1,69 @@
+
+body {
+  background-color: #f7e2dc;
+  font-family: arial;
+  color: gray;
+  font-size: 4vh;
+  font-weight: 600;
+}
+
+.text{
+	position: relative;
+	text-align: center;
+	top: 45vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  animation: movement 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.kiwi{
+	position: relative;
+	top: -20vh;
+	height: 30vh;
+	animation: spinType 5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+}
+
+.egg{
+	height: 25vh;
+	position: relative;
+	top: 0vh;
+	animation: spinType 5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+	animation-direction: reverse;
+}
+
+@keyframes spinType {
+  0% {
+    transform: rotate(0turn);
+  }
+  50% {
+    transform: rotate(0.5turn);
+  }
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes movement {
+	0%{
+		transform: translateX(-50vw);
+	}
+	50%{
+		transform: translateX(50vw);
+	}
+	100%{
+		transform: translateX(-50vw);
+	}
+}
+
